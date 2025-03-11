@@ -1,10 +1,11 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import logo from "../assets/examdin_logo.png"
+import toast from "react-hot-toast"
 const Navbar = (props) => {
 
   let isLoggedIn = props.isLoggedIn;
-  let setLoggedIn = props.setLoggedIn;
+  let setIsLoggedIn = props.setIsLoggedIn;
   return (
     <div className="flex gap-3 justify-evenly">
     
@@ -33,12 +34,15 @@ const Navbar = (props) => {
         }
         { !isLoggedIn &&
         <Link to="/signup">
-          <button>Sign Up</button>
+          <button >Sign Up</button>
         </Link>
         }
         { isLoggedIn&&
         <Link to="/">
-          <button>Logout</button>
+          <button onClick={()=>{
+            setIsLoggedIn(false);
+            toast.success("Logged Out");
+          }}>Logout</button>
         </Link>
         }
         {
