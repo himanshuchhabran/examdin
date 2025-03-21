@@ -1,5 +1,7 @@
 import React from 'react'
-import {frame_image} from "../assets/frame_image.png"
+import frame_image from "../assets/white_frame.jpg"
+import SignupForm from './SignUpForm'
+import LoginForm from './LoginForm'
 
 const Template = (props) => {
   return ( 
@@ -13,7 +15,7 @@ const Template = (props) => {
 
         </p>
 
-        {props.formtype=="signup"?(<SignupForm/>):(<LoginForm/>)}
+        {props.formtype==="signup"?(<SignupForm setIsLoggedIn={props.setIsLoggedIn}/>):(<LoginForm setIsLoggedIn={props.setIsLoggedIn}/>)}
 
         <div>
             <div></div>
