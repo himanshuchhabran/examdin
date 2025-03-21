@@ -2,7 +2,9 @@ import React from 'react'
 
 const Dashboard = () => {
   return (
-    <div>Welcome to examdin</div>
+    <div
+    className='flex justify-center items-center'
+    >Welcome to examdin</div>
   )
 }
 

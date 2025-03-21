@@ -7,7 +7,7 @@ const Navbar = (props) => {
   let isLoggedIn = props.isLoggedIn;
   let setIsLoggedIn = props.setIsLoggedIn;
   return (
-    <div className="flex gap-3 justify-evenly">
+    <div className="flex gap-3 justify-evenly items-center "> 
     
       <Link to="/">
         <img src={logo} alt="logo" width={50} height = {32} loading ="lazy"/>
